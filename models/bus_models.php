@@ -33,5 +33,20 @@
         }
         
         //Función para obtener todos los buses.
+        public static function all()
+        {
+            $listaBuses = [];
+            $db=Db::getConnect();
+            $sql=$db->query('SELECT * FROM BUSES');
+
+            //Cargar en la $listaBuses cada registro desde la base de datos
+            foreach($sql->fetchAll() as $buses)
+            {
+                $listaBuses[]= new Buses($bues['id'],$bues['nombre'],$bues['asiente'],$bues['largo'],
+                                         $bues['ancho'],$bues['patente'],$bues['origen'],$bues['destino'],
+                                         $bues['garege'],$bues['revision'],$bues['comentario']);
+            }
+            return $listaBuses;
+        }
     }
 ?>
