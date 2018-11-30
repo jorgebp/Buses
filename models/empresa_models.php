@@ -25,7 +25,7 @@ class empresa_models
         //Cargar en la $listaempresa cada registro desde la base de datos
         foreach ($sql->fetchAll() as $empresa)
         {
-            $listaempresa[]= new Empresa($empresa['idempresa'],$empresa['nombreempresa'],$empresa['rutempresa'])
+            $listaempresa[]= new Empresa($empresa['idempresa'],$empresa['nombreempresa'],$empresa['rutempresa']);
         }
         return $listaempresa;
     }
@@ -35,10 +35,30 @@ class empresa_models
     {
         $db=Db::getConnect();
         $insert=$db->prepare('INSERT INTO EMPRESA VALUES(:idempresa,:nomempresa,:rutempresa)');
-        $insert->bindValue('',$empresa->idempresa);
-        $insert->bindValue('',$empresa->nombreempresa);
-        $insert->bindValue('',$empresa->rutempresa);
+        $insert->bindValue('idempresa',$empresa->idempresa);
+        $insert->bindValue('nombreempresa',$empresa->nombreempresa);
+        $insert->bindValue('rutempresa',$empresa->rutempresa);
         $insert->execute();
+    }
+
+    //Función para actualizar.
+    public static function uptdate($empresa)
+    {
+        $db=Db::getConnect();
+        $update=$db->prepare('UPDATE empresa SET nomempresa=:nombreempresa, rutempresa=:rutempresa WHERE idempresa=:idempresa');
+        $update->bindValue('idempresa',$empresa->idempresa);
+        $update->bindValue('nombreempresa',$empresa->nombreempresa);
+        $update->bindValue('rutempresa',$empresa->rutempresa);
+        $update->execute();
+    }
+
+    //Función para eliminar por el id.
+    public static function delete($idempresa)
+    {
+        $db=Db::getConnect();
+        $delete=$db->prepare('DELETE FROM empresa WHERE idempresa=:idempresa');
+        $delete->bindValue('idempresa',$empresa->idempresa);
+        $delete->execute();
     }
 }
 
