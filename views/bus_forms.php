@@ -51,6 +51,7 @@
         </fieldset>
         <br>
         <input type="submit" value="Complete">
+        <input type="button" value="Limpiar">
         </fieldset>
     </form>
 </body>
