@@ -14,24 +14,32 @@
             <label for="rut">Rut</label>
             <input type="text" id="rut">
             <br>
-            <label for="name">Nombre Pasajero</label>
+            <label for="name">Nombre</label>
             <input type="text" id="name">
             <label for="apellido">Apellido</label>
             <input type="text" id="apellido">
             <br>
-            <label for="age">Edad</label>
-            <input type="number" id="age">
             <label for="email">Correo</label>
             <input type="email" id="email">
-            <br>
-            <fieldset>
-                <legend>Datos Viaje</legend>
-                <label for="salida">Salida</label>
-                <select name="selectsalida" id="selectsalida">
+            <label for="tipopasaje">Tipo Pasajero</label>
+            <select name="tipopasaje" id="tipopasaje">
                     <option value="">Seleccione</option>
                     <option value="">
                         <?php 
-                            //Codigo de PHP para mostrar la lista de ciudades de salida.
+                            //Codigo de PHP para mostrar la lista de tipo pasajero.
+                        ?>
+                    </option>
+                </select>
+            <fieldset>
+                <legend>Datos Viaje</legend>
+                <label for="numasie">Asiento</label>
+                <input type="number" name="" id="numasie">
+                <label for="salida">Origen</label>
+                <select name="selectorigen" id="selectorigen">
+                    <option value="">Seleccione</option>
+                    <option value="">
+                        <?php 
+                            //Codigo de PHP para mostrar la lista de ciudades de origen.
                         ?>
                     </option>
                 </select>
@@ -45,7 +53,19 @@
                     </option>
                 </select>
                 <br>
+                <label for="timeviaj">Hora salida</label>
+                <input type="time" name="" id="timeviaj">
             </fieldset>
+                <fieldset>
+                    <legend>Datos Contacto</legend>
+                    <label for="contname">Nombre</label>
+                    <input type="text" id="contname">
+                    <label for="contnum">Numero Contacto</label>
+                    <input type="text" id="contnum">
+                </fieldset>
+                <br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
         </fieldset>
     </form>
 </body>
