@@ -28,13 +28,13 @@
         <br>
         <label for="nacicond">Nacionalidad</label>
         <select name="selectname" id="nacicond">
-                <option value="">Seleccione su Nacionalidad</option>
-                <option value="">
-                    <?php 
-                        //Codigo de PHP para mostrar la lista de regiones.
-                    ?>
-                </option>
-            </select>
+        <option value="">Seleccione su Nacionalidad</option>
+            <option value="">
+                <?php 
+                    //Codigo de PHP para mostrar la lista de regiones.
+                ?>
+            </option>
+        </select>
         <fieldset>
             <legend>Dirección</legend>
             <label for="dircond">Dirección</label>
@@ -46,15 +46,6 @@
                 <option value="">
                     <?php 
                         //Codigo de PHP para mostrar la lista de regiones.
-                    ?>
-                </option>
-            </select>
-            <label for="ciucond">Ciudad</label>
-            <select name="selectname" id="ciucond">
-                <option value="">Seleccione su ciudad</option>
-                <option value="">
-                    <?php 
-                        //Codigo de PHP para mostrar la lista de ciudad.
                     ?>
                 </option>
             </select>
