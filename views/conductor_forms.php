@@ -24,8 +24,10 @@
         <label for="corcond">Correo</label>
         <input type="text" name="" id="corcond" placeholder="prueba@pedidobus.cl">
         <label for="foncond">Telefono</label>
-        <input type="text" name="" id="foncond" placeholder="1111111111">
+        <input type="text" name="" id="foncond" placeholder="+56911111111">
         <br>
+        <label for="fecnac">Fecha Nacimiento</label>
+        <input type="date" name="fecnac" id="fecnac">
         <label for="nacicond">Nacionalidad</label>
         <select name="selectname" id="nacicond">
         <option value="">Seleccione su Nacionalidad</option>
@@ -59,6 +61,46 @@
                 </option>
             </select>
         </fieldset>
+        <fieldset>
+            <legend>Datos Empresa</legend>
+            <label for="empcond">Empresa</label>
+            <select name="selectname" id="empcond">
+                <option value="">Seleccione su empresa</option>
+                <option value="">
+                    <?php 
+                        //Codigo de PHP para mostrar la lista de empresa.
+                    ?>
+                </option>
+            </select>
+            <br>
+            <label for="anocond">Años en empresa</label>
+            <input type="number" name="anocond" id="anocond">
+            <label for="fecven">Vencimiento Licencia</label>
+            <input type="date" name="fecven" id="fecven">
+        </fieldset>
+        <fieldset>
+            <legend>Datos de contacto</legend>
+            <label for="nomcont">Nombre Contacto</label>
+            <input type="text" name="nomcont" id="nomcont" placeholder="Nombre">
+            <label for="apescont">Apellidos</label>
+            <input type="text" name="apescont" id="apescont" placeholder="Nombre">
+            <br>
+            <label for="nomcont">Tipo Familiar</label>
+            <select name="selectfam" id="tipfam">
+                <option value="">Seleccione</option>
+                <option value="">Esposa</option>
+                <option value="">HIjos</option>
+                <option value="">Madre</option>
+                <option value="">Padre</option>
+                <option value="">Hermana</option>
+                <option value="">Hermano</option>
+            </select>
+            <label for="telcont">Telefono Contacto</label>
+            <input type="text" name="telcont" id="telcont" placeholder="+56911111111">
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
     </fieldset>
     </form>
 </body>
