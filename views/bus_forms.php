@@ -21,22 +21,23 @@
                 </option>
             </select>
             <label for="asientos">Cantidad de asientos</label>
-            <input type="number" id="asiento" value="45" readonly>
+            <input type="number" id="asiento" placeholder="45" readonly>
             <label for="patente">Patente</label>
-            <input type="text" value="AA*BB-11">
+            <input type="text" value="" placeholder="AA*BB-11">
             <fieldset>
             <legend>Dimensiones Buses</legend>
             <label for="largo">Largo</label>
-            <input type="text" id="largo">
+            <input type="text" id="largo" placeholder="0mts">
             <label for="ancho">Ancho</label>
-            <input type="text" id="ancho">
+            <input type="text" id="ancho" placeholder="0mts">
             <label for="alto">Alto</label>
-            <input type="text" id="alto">
+            <input type="text" id="alto" placeholder="0mts">
         </fieldset>
         <fieldset>
             <legend>Estado de Buses</legend>
             <label for="estado">En Garage <input type="radio" name="estado"></label>
             <label for="estado">En Circulación <input type="radio" name="estado"></label>
+            <label for="estado">Debaja <input type="radio" name="estado"></label>
         </fieldset>
         <fieldset>
             <legend>Revisión técnica</legend>
@@ -44,13 +45,14 @@
             <input type="date" name="ulrevision">
             <label for="comen">Comentario</label>
             <textarea name="ulcomen" id="ulcomen" cols="30" rows="10"></textarea>
+            <br>
             <label for="prorevision">Próxima revisión técnica</label>
             <input type="date" name="prorevision">
             <label for="comen">Comentario</label>
             <textarea name="procomen" id="procomen" cols="30" rows="10"></textarea>
         </fieldset>
         <br>
-        <input type="submit" value="Complete">
+        <input type="submit" value="Enviar">
         <input type="button" value="Limpiar">
         </fieldset>
     </form>
